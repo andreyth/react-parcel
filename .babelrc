@@ -1,0 +1,30 @@
+{
+  "presets": [
+    ["@babel/preset-env", { "modules": false }],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-runtime",
+    "babel-plugin-styled-components",
+    ["module-resolver", {
+      // "root": ["./src"],
+      "alias": {
+        "src": "./src",
+        "client": "./src/client",
+        "server": "./src/server",
+        "shared": "./src/shared",
+        "components": "./src/shared/components"
+      }
+    }]
+  ],
+
+  "env": {
+    "server": {
+      "plugins": ["dynamic-import-node-babel-7"]
+    },
+    "client": {
+      "plugins": ["@babel/plugin-syntax-dynamic-import"]
+    }
+  }
+}

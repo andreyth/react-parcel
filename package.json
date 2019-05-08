@@ -1,0 +1,47 @@
+{
+  "name": "parcel_teste",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "BABEL_ENV=client parcel ./src/index.html",
+    "wt-client": "BABEL_ENV=client node parcel-conf/client-conf.js",
+    "wt-server": "BABEL_ENV=server node parcel-conf/server-conf.js",
+    "exec-wt": "npm run wt-client & npm run wt-server",
+    "exec-client": "lite-server --baseDir ./build/client",
+    "exec-server": "nodemon ./build/server/index.js",
+    "standard": "standard --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-dynamic-import-node-babel-7": "^2.0.7",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-styled-components": "^1.10.0",
+    "fs-extra": "^7.0.1",
+    "lite-server": "^2.4.0",
+    "nodemon": "^1.19.0",
+    "parcel-bundler": "^1.12.3",
+    "standard": "^12.0.1"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "./build"
+    ]
+  }
+}
